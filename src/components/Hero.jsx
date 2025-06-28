@@ -1,40 +1,38 @@
 import React from "react";
-import Typed from "react-typed";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function About() {
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center justify-center text-center px-4"
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
+    <section id="about" className="py-16 px-4 max-w-4xl mx-auto text-center">
+      <motion.h2
+        className="text-3xl font-bold mb-6"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex flex-col items-center gap-4"
       >
+        About Me
+      </motion.h2>
+
+      <div className="flex flex-col items-center gap-4">
         <img
-         src="public/images/my.jpg"
-         alt="Malik Junaid"
-         className="w-32 h-32 rounded-full border-4 border-white dark:border-zinc-800 shadow-lg"
-       />
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Hi, I’m <span className="text-blue-600 dark:text-blue-400">Malik Junaid</span>
-        </h1>
-        <Typed
-          className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-300"
-          strings={[
-            "Cybersecurity Learner",
-            "Web Developer",
-            "Bug Bounty Enthusiast"
-          ]}
-          typeSpeed={50}
-          backSpeed={30}
-          loop
+          src="/Gallery/image10.jpg"   // note: NO `public` prefix here
+          alt="About Malik"
+          className="w-48 h-48 object-cover rounded-full shadow"
         />
-      </motion.div>
+        <motion.p
+          className="text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          I&apos;m a passionate cybersecurity learner and web developer, exploring the
+          depths of ethical hacking, bug bounty, and front-end technologies. I
+          believe in continuous learning, hands-on practice, and building secure
+          applications that make a difference. Let&apos;s build the future together — securely.
+        </motion.p>
+      </div>
     </section>
   );
 }
