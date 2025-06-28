@@ -15,7 +15,7 @@ export default function About() {
       </motion.h2>
       <div className="flex flex-col items-center gap-4">
         <img
-          src="/images/image6.jpg"
+          src="/Gallery/image9.webp"
           alt="About Malik"
           className="w-48 rounded shadow"
         />
